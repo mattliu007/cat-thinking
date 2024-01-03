@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* 在这里添加Google Analytics代码 */}
-          <script
+{/*           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=GTM-PQLHQV45"
           />
@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
                 gtag('config', 'GTM-PQLHQV45');
               `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />
