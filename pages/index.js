@@ -186,7 +186,7 @@ export default function components() {
       </main>
 
       <footer className="text-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <p>更多功能请访问 <a href="https://aibene.cn" style={{ textDecoration: 'underline' }}>花集AI精灵 aibene.cn</a></p>
+        <p>更多AI功能请访问 <a href="https://aibene.cn" style={{ textDecoration: 'underline' }}>花集AI精灵 aibene.cn</a></p>
       </footer>
       <style jsx>{`
         .container {
@@ -200,7 +200,10 @@ export default function components() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 50vh;
+          padding: 2rem;
+        }
+        footer {
           padding: 2rem;
         }
       `}</style>
