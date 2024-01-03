@@ -82,8 +82,8 @@ export default function components() {
   
     if (file && validTypes.includes(file.type)) {
       const options = {
-        maxSizeMB: 1, // 最大文件大小为1MB
-        maxWidthOrHeight: 1920, // 图片最大宽度或高度为1920像素
+        maxSizeMB: 5, // 最大文件大小为5MB
+        maxWidthOrHeight: 3840, // 图片最大宽度或高度为1920像素
         useWebWorker: true
       };
       try {
