@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'What the cat think',
-  description: 'Upload an image of a cat',
+  title: '毛孩子AI翻译官',
+  description: '上传一张猫的图片',
 }
 
 export default function RootLayout({ children }) {

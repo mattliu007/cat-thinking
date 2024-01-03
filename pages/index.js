@@ -134,30 +134,30 @@ export default function components() {
   return (
     <div className="container">
       <Head>
-        <title>What is the cat thinking</title>
+        <title>毛孩子AI翻译官</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <main className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">What is the cat thinking</h1>
-        <div className="mt-4">
-          <a href="http://mao.jellyw.com" className="text-blue-500">中文</a>
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">毛孩子AI翻译官</h1>
+{/*         <div className="mt-4">
+          <a href="https://cat.aibene.cn" className="text-blue-500">中文</a>
           <span> | </span>
-          <a href="http://cat.jellyw.com" className="text-blue-500">English</a>
-        </div>
+          <a href="https://cat.aibene.cn" className="text-blue-500">English</a>
+        </div> */}
         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-4">
-          Upload an image of a cat and we'll tell you what it might be thinking.
+          上传一张毛孩子的图片，AI会告诉你TA可能在想什么。
         </p>
         
 
         <div className="w-full max-w-md px-2 py-2">
           <form onSubmit={submitForm} encType="multipart/form-data">
             <div className="grid w-full gap-2">
-              <Label htmlFor="catImage">Upload Cat Image</Label>
+              <Label htmlFor="catImage">上传毛孩子的图片</Label>
               <Input id="catImage" name="image" type="file" onChange={previewImage} />
-              <Button type="submit" variant="dark" disabled={loading || compressing}>
-              {compressing ? 'Scaning...' : (loading ? 'Analyzing...' : 'Analyze')}
-            </Button>
+{/*               <Button type="submit" variant="dark" disabled={loading || compressing}>
+              {compressing ? '正在扫描…' : (loading ? '正在翻译…' : '开始翻译')}
+            </Button> */}
             </div>
           </form>
         </div>
@@ -166,36 +166,27 @@ export default function components() {
           <CardHeader>
             <div className="flex items-center">
               <CatIcon className="w-6 h-6 mr-2" />
-              <h2 className="text-2xl font-bold">Analyzed Image</h2>
+              <h2 className="text-2xl font-bold">翻译结果</h2>
             </div>
           </CardHeader>
           <CardContent>
           {compressing ? (
-            <div style={{ textAlign: 'center' }}>Scaning image...</div>
+            <div style={{ textAlign: 'center' }}>正在扫描…</div>
           ) : (
             imagePreview && <img alt="Analyzed cat image" className="aspect-content object-cover" height="500" src={imagePreview} width="500" />
           )}
           <div className="mt-4 rounded-lg p-4">
           <p className="ml-2 text-lg" style={{ textAlign: 'center' }}>
-            {compressing ? "🐱🐱🐱🐱🐱🐱" : (loading ? "Analyzing..." : (result.error ? `An error occurred, please try again. Error message: ${result.error}` : result.data || "🐱: Where have you been? I've been waiting for you for a long time."))}
+            {compressing ? "🐱🐶🐱🐶🐱🐶" : (loading ? "正在翻译…" : (result.error ? `An error occurred, please try again. Error message: ${result.error}` : result.data || "🐱🐶: 你去哪里了？我等你好久了。"))}
           </p>
           </div>
         </CardContent>
         </Card>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <CatIcon className="w-12 h-12" />
-          <CatIcon className="w-12 h-12" />
-          <CatIcon className="w-12 h-12" />
-        </div>
       </main>
 
       <footer className="text-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <a href="https://www.producthunt.com/posts/what-is-the-cat-thinking?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-what&#0045;is&#0045;the&#0045;cat&#0045;thinking" target="_blank">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=431322&theme=neutral" alt="What&#0032;is&#0032;the&#0032;cat&#0032;thinking - Upload&#0044;&#0032;Discover&#0032;Your&#0032;Cat&#0039;s&#0032;Whisker&#0045;Twitching&#0032;Thoughts&#0033; | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" />
-        </a>
-        <p>Made by <a href="http://cat.jellyw.com" style={{ textDecoration: 'underline' }}>jellyw</a></p>
-        <p>Contact me: <a href="mailto:admin@jellyw.com">wgd@jellyw.com</a></p>
+        <p>更多功能请访问 <a href="https://aibene.cn" style={{ textDecoration: 'underline' }}>花集AI精灵 aibene.cn</a></p>
       </footer>
       <style jsx>{`
         .container {

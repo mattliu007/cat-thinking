@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
           {/* 在这里添加Google Analytics代码 */}
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-YBC3RTJHB4"
+            src="https://www.googletagmanager.com/gtag/js?id=GTM-PQLHQV45"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-YBC3RTJHB4');
+                gtag('config', 'GTM-PQLHQV45');
               `,
             }}
           />
